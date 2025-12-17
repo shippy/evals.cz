@@ -3,7 +3,9 @@
 
 <footer class="footer">
 	<div class="container">
-		<p>Organizuje <strong>Šimon Podhajský</strong> a <strong>Veronika Pešková</strong></p>
+		<p class="footer-description">Pražský meetup pro lidi, kteří staví a zkoumají AI-poháněné produkty</p>
+		<p class="footer-organizers">Organizuje <a href="https://simon.podhajsky.net" target="_blank" rel="noopener noreferrer">Šimon Podhajský</a> a <strong>Veronika Pešková</strong></p>
+		<p class="footer-copyright">© 2025 Evals.cz – meetup o evaluaci AI aplikací v Praze</p>
 		<p class="footer-note">Zájem o hosting nebo partnerství? Ozvěte se!</p>
 	</div>
 </footer>
@@ -24,6 +26,24 @@
 		font-size: 0.9rem;
 	}
 
+	.footer-description {
+		font-size: 1rem;
+		margin-bottom: 1rem;
+	}
+
+	.footer-organizers a {
+		color: var(--black);
+		text-decoration: underline;
+		text-decoration-color: var(--accent);
+		text-decoration-thickness: 2px;
+		font-weight: 700;
+		transition: color 0.1s ease;
+	}
+
+	.footer-organizers a:hover {
+		color: var(--accent);
+	}
+
 	.footer strong {
 		font-weight: 700;
 		text-decoration: underline;
@@ -31,7 +51,14 @@
 		text-decoration-thickness: 2px;
 	}
 
+	.footer-copyright {
+		font-size: 0.85rem;
+		opacity: 0.8;
+		margin-top: 1rem;
+	}
+
 	.footer-note {
-		font-size: 0.9rem;
+		font-size: 0.85rem;
+		margin-top: 0.5rem;
 	}
 </style>
