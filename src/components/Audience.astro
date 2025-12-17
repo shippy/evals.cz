@@ -1,0 +1,138 @@
+---
+---
+
+<section class="audience">
+	<div class="container">
+		<h2 class="section-title">Pro koho je to</h2>
+		<div class="audience-grid">
+			<div class="audience-card">
+				<span class="audience-badge">ML/AI inženýři</span>
+				<p>Nasazujete a monitorujete modely v produkci</p>
+			</div>
+			<div class="audience-card">
+				<span class="audience-badge">Backend vývojáři</span>
+				<p>Integrujete LLM nebo RAG do existujícího produktu</p>
+			</div>
+			<div class="audience-card">
+				<span class="audience-badge">Datoví vědci</span>
+				<p>Měříte a vylepšujete výkon AI systémů</p>
+			</div>
+			<div class="audience-card">
+				<span class="audience-badge">Produktoví manažeři</span>
+				<p>Potřebujete rozumět kvalitě AI funkcí</p>
+			</div>
+			<div class="audience-card">
+				<span class="audience-badge">Výzkumníci AI</span>
+				<p>Studujete spolehlivost a bezpečnost AI</p>
+			</div>
+			<div class="audience-card">
+				<span class="audience-badge">Začátečníci vítáni</span>
+				<p>Praktický zájem a zvědavost jsou vítány</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	.audience {
+		background: var(--gray-90);
+		border-top: var(--border-heavy) solid var(--black);
+		position: relative;
+		padding: 6rem 0;
+	}
+
+	.audience::before {
+		content: '03';
+		position: absolute;
+		top: 2rem;
+		left: 4rem;
+		font-size: 10rem;
+		font-weight: 800;
+		font-family: var(--font-display);
+		color: var(--white);
+		opacity: 0.3;
+		z-index: 0;
+	}
+
+	.section-title {
+		text-align: left;
+		margin-left: 2rem;
+		font-family: var(--font-display);
+		text-transform: uppercase;
+		font-size: clamp(2rem, 5vw, 3rem);
+		font-weight: 700;
+		margin-bottom: 3rem;
+	}
+
+	.audience-grid {
+		display: flex;
+		flex-direction: column;
+		gap: 0;
+		position: relative;
+		z-index: 1;
+	}
+
+	.audience-card {
+		background: transparent;
+		border-bottom: 2px solid var(--black);
+		padding: 2rem 0;
+		display: flex;
+		align-items: center;
+		gap: 2rem;
+		transition: all 0.1s ease;
+	}
+
+	.audience-card:last-child {
+		border-bottom: none;
+	}
+
+	.audience-card:hover {
+		background: var(--black);
+		color: var(--white);
+		padding-left: 2rem;
+		border-left: var(--border-heavy) solid var(--accent);
+	}
+
+	.audience-badge {
+		background: transparent;
+		border: 3px solid var(--black);
+		color: var(--black);
+		padding: 0.75rem 1.5rem;
+		font-family: var(--font-ui);
+		font-weight: 700;
+		font-size: 0.9rem;
+		min-width: 240px;
+		text-align: center;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+	}
+
+	.audience-card:hover .audience-badge {
+		border-color: var(--white);
+		color: var(--white);
+	}
+
+	.audience-card p {
+		font-family: var(--font-mono);
+		font-size: 0.9rem;
+	}
+
+	@media (max-width: 768px) {
+		.audience::before {
+			font-size: 6rem;
+		}
+
+		.section-title {
+			margin-left: 0;
+		}
+
+		.audience-card {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+
+		.audience-badge {
+			min-width: auto;
+		}
+	}
+</style>

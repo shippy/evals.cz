@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+	<!-- Background -->
+	<rect width="1200" height="630" fill="#FFFFFF"/>
+
+	<!-- Border -->
+	<rect x="0" y="0" width="1200" height="630" fill="none" stroke="#000000" stroke-width="8"/>
+
+	<!-- Background number -->
+	<text x="1050" y="550" font-family="Space Grotesk, Arial Black, sans-serif" font-size="400" font-weight="800" fill="#E5E5E5" text-anchor="end">01</text>
+
+	<!-- Main title -->
+	<text x="60" y="180" font-family="Space Grotesk, Arial Black, sans-serif" font-size="120" font-weight="800" fill="#000000">EVALS.CZ</text>
+
+	<!-- Subtitle -->
+	<text x="60" y="260" font-family="JetBrains Mono, Courier New, monospace" font-size="32" fill="#000000">Evaluace AI aplikací, nejen modelů</text>
+
+	<!-- Description -->
+	<text x="60" y="340" font-family="JetBrains Mono, Courier New, monospace" font-size="24" fill="#000000">Pražský meetup pro lidi, kteří staví nebo</text>
+	<text x="60" y="380" font-family="JetBrains Mono, Courier New, monospace" font-size="24" fill="#000000">zkoumají produkty poháněné AI.</text>
+
+	<!-- Red accent bar -->
+	<rect x="60" y="430" width="200" height="8" fill="#D7141A"/>
+
+	<!-- Location -->
+	<text x="60" y="490" font-family="Space Grotesk, Arial Black, sans-serif" font-size="28" font-weight="700" fill="#000000">PRAHA</text>
+</svg>

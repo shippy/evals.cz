@@ -1,0 +1,145 @@
+---
+---
+
+<section id="speak" class="speaker-section">
+	<div class="container">
+		<h2 class="section-title">Chci přednášet</h2>
+		<p class="speaker-intro">Hledáme přednášející, kteří se chtějí podělit o své zkušenosti</p>
+		<div class="speaker-topics">
+			<div class="speaker-topic">
+				<span class="topic-number">01</span>
+				<h3>Case Studies</h3>
+				<p>Skutečné výzvy a řešení při evaluaci v produkci</p>
+			</div>
+			<div class="speaker-topic">
+				<span class="topic-number">02</span>
+				<h3>Nástroje do hloubky</h3>
+				<p>Frameworky a nástroje, které stavíte nebo používáte</p>
+			</div>
+			<div class="speaker-topic">
+				<span class="topic-number">03</span>
+				<h3>Výzkum</h3>
+				<p>Nejnovější poznatky v oblasti evaluace AI</p>
+			</div>
+			<div class="speaker-topic">
+				<span class="topic-number">04</span>
+				<h3>Otevřené problémy</h3>
+				<p>Nevyřešené výzvy, kde potřebujeme názory komunity</p>
+			</div>
+		</div>
+		<a href="mailto:simon@podhajsky.net" class="btn btn-primary">Navrhnout přednášku</a>
+	</div>
+</section>
+
+<style>
+	.speaker-section {
+		background: var(--white);
+		border-top: var(--border-standard) solid var(--black);
+		position: relative;
+		padding: 6rem 0;
+	}
+
+	.speaker-section::before {
+		content: '06';
+		position: absolute;
+		bottom: 2rem;
+		right: 4rem;
+		font-size: 15rem;
+		font-weight: 800;
+		font-family: var(--font-display);
+		color: var(--gray-90);
+		z-index: 0;
+	}
+
+	.section-title {
+		text-align: center;
+		font-family: var(--font-display);
+		text-transform: uppercase;
+		font-size: clamp(2rem, 5vw, 3rem);
+		font-weight: 700;
+		margin-bottom: 1rem;
+	}
+
+	.speaker-intro {
+		text-align: center;
+		font-family: var(--font-mono);
+		font-size: 1.25rem;
+		color: var(--black);
+		margin-bottom: 3rem;
+	}
+
+	.speaker-topics {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 0;
+		margin-bottom: 3rem;
+		position: relative;
+		z-index: 1;
+	}
+
+	.speaker-topic {
+		background: var(--white);
+		padding: 3rem 2rem;
+		border: var(--border-standard) solid var(--black);
+		margin: -2px;
+		position: relative;
+		transition: all 0.1s ease;
+	}
+
+	.speaker-topic:nth-child(2),
+	.speaker-topic:nth-child(3) {
+		background: var(--gray-90);
+	}
+
+	.speaker-topic:hover {
+		background: var(--black);
+		color: var(--white);
+	}
+
+	.topic-number {
+		font-family: var(--font-display);
+		font-size: 5rem;
+		font-weight: 800;
+		color: var(--accent);
+		position: absolute;
+		top: 1rem;
+		right: 1rem;
+		line-height: 1;
+	}
+
+	.speaker-topic:hover .topic-number {
+		color: var(--white);
+		opacity: 0.2;
+	}
+
+	.speaker-topic h3 {
+		font-family: var(--font-display);
+		font-size: 1.5rem;
+		margin-bottom: 0.5rem;
+		text-transform: uppercase;
+		position: relative;
+		z-index: 1;
+	}
+
+	.speaker-topic p {
+		font-family: var(--font-mono);
+		font-size: 0.9rem;
+		line-height: 1.7;
+	}
+
+	.speaker-section > .container > .btn {
+		display: block;
+		width: fit-content;
+		margin: 0 auto;
+	}
+
+	@media (max-width: 768px) {
+		.speaker-section::before {
+			font-size: 6rem;
+		}
+
+		.speaker-topics {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>

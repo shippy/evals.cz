@@ -1,0 +1,155 @@
+---
+---
+
+<section class="topics">
+	<div class="container">
+		<h2 class="section-title">Co řešíme</h2>
+		<div class="topics-grid">
+			<div class="topic-card">
+				<div class="topic-icon">🔍</div>
+				<h3>Kvalita RAG systémů</h3>
+				<p>Hodnocení kvality retrievalu a celkových RAG pipeline v produkci</p>
+			</div>
+			<div class="topic-card">
+				<div class="topic-icon">⚠️</div>
+				<h3>Regrese v produkci</h3>
+				<p>Jak odhalit a opravit problémy v nasazených AI systémech</p>
+			</div>
+			<div class="topic-card">
+				<div class="topic-icon">👥</div>
+				<h3>Human-in-the-loop</h3>
+				<p>Evaluační přístupy kombinující lidskou expertízu s automatizací</p>
+			</div>
+			<div class="topic-card">
+				<div class="topic-icon">⚙️</div>
+				<h3>Vývojový lifecycle</h3>
+				<p>Integrace evaluací do vývoje a CI/CD pipeline</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	.topics {
+		background: var(--white);
+		border-top: var(--border-standard) solid var(--black);
+		border-bottom: var(--border-standard) solid var(--black);
+		position: relative;
+		padding: 6rem 0;
+	}
+
+	.topics::before {
+		content: '02';
+		position: absolute;
+		top: 2rem;
+		right: 4rem;
+		font-size: 8rem;
+		font-weight: 800;
+		font-family: var(--font-display);
+		color: var(--accent);
+		opacity: 0.1;
+		z-index: 0;
+	}
+
+	.section-title {
+		text-align: left;
+		margin-left: 2rem;
+		font-family: var(--font-display);
+		text-transform: uppercase;
+		font-size: clamp(2rem, 5vw, 3rem);
+		font-weight: 700;
+		margin-bottom: 3rem;
+	}
+
+	.topics-grid {
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		gap: 0;
+		position: relative;
+		z-index: 1;
+	}
+
+	.topic-card {
+		background: var(--white);
+		padding: 2.5rem 2rem;
+		border: var(--border-standard) solid var(--black);
+		margin: -2px;
+		transition: border-color 0s;
+	}
+
+	.topic-card:nth-child(1) {
+		grid-column: 1 / 7;
+	}
+
+	.topic-card:nth-child(2) {
+		grid-column: 7 / 13;
+		border-left-width: var(--border-heavy);
+		border-left-color: var(--accent);
+	}
+
+	.topic-card:nth-child(3) {
+		grid-column: 1 / 6;
+		background: var(--black);
+		color: var(--white);
+	}
+
+	.topic-card:nth-child(4) {
+		grid-column: 6 / 13;
+	}
+
+	.topic-card:hover {
+		border-color: var(--accent);
+		z-index: 2;
+	}
+
+	.topic-icon {
+		display: none;
+	}
+
+	.topic-card h3 {
+		font-family: var(--font-display);
+		font-size: clamp(1.25rem, 3vw, 2rem);
+		margin-bottom: 1rem;
+		text-transform: uppercase;
+	}
+
+	.topic-card h3::before {
+		content: '[0' counter(topic) ']';
+		color: var(--accent);
+		margin-right: 0.5rem;
+		font-family: var(--font-mono);
+	}
+
+	.topic-card:nth-child(1) { counter-reset: topic 1; }
+	.topic-card:nth-child(2) { counter-reset: topic 2; }
+	.topic-card:nth-child(3) { counter-reset: topic 3; }
+	.topic-card:nth-child(4) { counter-reset: topic 4; }
+
+	.topic-card:nth-child(3) h3::before {
+		color: var(--white);
+	}
+
+	.topic-card p {
+		font-family: var(--font-mono);
+		font-size: 0.9rem;
+		line-height: 1.7;
+	}
+
+	@media (max-width: 768px) {
+		.topics::before {
+			font-size: 6rem;
+		}
+
+		.section-title {
+			margin-left: 0;
+		}
+
+		.topics-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.topic-card {
+			grid-column: 1 / -1 !important;
+		}
+	}
+</style>

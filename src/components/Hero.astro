@@ -1,0 +1,113 @@
+---
+---
+
+<section class="hero">
+	<div class="container">
+		<div class="hero-content">
+			<h1 class="hero-title">
+				<span class="gradient-text">Evals.cz</span>
+			</h1>
+			<p class="hero-subtitle">Evaluace AI aplikací, nejen modelů.</p>
+			<p class="hero-description">
+				Evals.cz je pražský meetup pro lidi, kteří staví nebo zkoumají produkty poháněné AI. Benchmarky modelů na leaderboardech jsou zajímavé, ale jak zhodnotit konkrétní RAG pipeline v produkci?
+			</p>
+			<div class="hero-cta">
+				<a href="#signup" class="btn btn-primary">Chci být u dalšího meetupu</a>
+				<a href="#speak" class="btn btn-secondary">Chci přednášet</a>
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	.hero {
+		min-height: 100vh;
+		display: flex;
+		align-items: flex-start;
+		position: relative;
+		background: var(--white);
+		overflow: hidden;
+		border: var(--border-heavy) solid var(--black);
+		padding-top: 8rem;
+	}
+
+	.hero::before {
+		content: '01';
+		position: absolute;
+		top: 2rem;
+		right: 4rem;
+		font-size: 12rem;
+		font-weight: 800;
+		font-family: var(--font-display);
+		color: var(--accent);
+		opacity: 0.15;
+		z-index: 0;
+		line-height: 1;
+	}
+
+	.hero-content {
+		position: relative;
+		z-index: 1;
+		text-align: left;
+		padding: 4rem 0;
+	}
+
+	.hero-title {
+		font-family: var(--font-display);
+		font-size: clamp(4rem, 12vw, 9rem);
+		font-weight: 800;
+		margin-bottom: 1rem;
+		line-height: 0.9;
+		text-transform: uppercase;
+		letter-spacing: -0.02em;
+		color: var(--black);
+	}
+
+	.gradient-text {
+		color: var(--black);
+	}
+
+	.hero-subtitle {
+		font-family: var(--font-mono);
+		font-size: clamp(1rem, 2vw, 1.25rem);
+		color: var(--black);
+		margin: 2rem 0;
+		font-weight: 500;
+		border-left: var(--border-standard) solid var(--accent);
+		padding-left: 2rem;
+	}
+
+	.hero-description {
+		font-family: var(--font-mono);
+		font-size: clamp(0.9rem, 1.5vw, 1rem);
+		max-width: 600px;
+		margin: 0 0 3rem 4rem;
+		color: var(--white);
+		line-height: 1.7;
+		background: var(--black);
+		padding: 2rem;
+	}
+
+	.hero-cta {
+		display: flex;
+		gap: 1rem;
+		justify-content: flex-start;
+		flex-wrap: wrap;
+	}
+
+	@media (max-width: 768px) {
+		.hero {
+			min-height: 80vh;
+			border-width: var(--border-standard);
+			padding-top: 4rem;
+		}
+
+		.hero::before {
+			font-size: 6rem;
+		}
+
+		.hero-description {
+			margin-left: 0;
+		}
+	}
+</style>
