@@ -136,10 +136,17 @@
 	@media (max-width: 768px) {
 		.speaker-section::before {
 			font-size: 6rem;
+			bottom: 6rem;
+			right: 2rem;
 		}
 
 		.speaker-topics {
 			grid-template-columns: 1fr;
+		}
+
+		.speaker-section > .container > .btn {
+			position: relative;
+			z-index: 10;
 		}
 	}
 </style>
