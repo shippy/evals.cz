@@ -1,0 +1,94 @@
+---
+---
+
+<section class="partners-section">
+	<div class="container">
+		<h2 class="section-title">Partneři</h2>
+		<div class="partners-grid">
+			<a href="https://mywaypoint.ai" target="_blank" rel="noopener noreferrer" class="partner-card">
+				<div class="partner-logo">
+					<img src="/logos/waypoint-ai.svg" alt="Waypoint AI" />
+				</div>
+			</a>
+			<a href="https://www.make.com" target="_blank" rel="noopener noreferrer" class="partner-card">
+				<div class="partner-logo">
+					<img src="/logos/make.svg" alt="Make" />
+				</div>
+			</a>
+		</div>
+	</div>
+</section>
+
+<style>
+	.partners-section {
+		background: var(--gray-90);
+		border-top: var(--border-standard) solid var(--black);
+		padding: 4rem 0;
+	}
+
+	.section-title {
+		text-align: center;
+		font-family: var(--font-display);
+		text-transform: uppercase;
+		font-size: clamp(1.5rem, 4vw, 2rem);
+		font-weight: 700;
+		margin-bottom: 2rem;
+		letter-spacing: 0.1em;
+	}
+
+	.partners-grid {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 0;
+		max-width: 800px;
+		margin: 0 auto;
+	}
+
+	.partner-card {
+		background: var(--white);
+		padding: 3rem 2rem;
+		border: var(--border-standard) solid var(--black);
+		margin: -2px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: all 0.1s ease;
+		text-decoration: none;
+		min-height: 200px;
+	}
+
+	.partner-card:hover {
+		background: var(--black);
+		transform: scale(1.02);
+		z-index: 1;
+	}
+
+	.partner-logo {
+		width: 100%;
+		max-width: 200px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.partner-logo img {
+		width: 100%;
+		height: auto;
+		filter: grayscale(100%) contrast(100%);
+		transition: filter 0.1s ease;
+	}
+
+	.partner-card:hover .partner-logo img {
+		filter: grayscale(0%) brightness(0) invert(1);
+	}
+
+	@media (max-width: 768px) {
+		.partners-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.partner-card {
+			min-height: 150px;
+		}
+	}
+</style>

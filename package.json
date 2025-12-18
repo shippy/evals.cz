@@ -9,6 +9,7 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@lobehub/icons": "^2.48.0",
     "astro": "^5.16.6"
   }
 }
