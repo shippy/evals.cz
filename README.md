@@ -1,43 +1,77 @@
-# Astro Starter Kit: Minimal
+# Evals.cz
 
-```sh
-yarn create astro@latest -- --template minimal
-```
+Website for Evals.cz - a Prague meetup focused on evaluating AI applications and production LLM systems.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## About
 
-## 🚀 Project Structure
+Evals.cz is a Prague-based meetup for people building or researching AI-powered products, with practical focus on evaluating RAG systems and LLM functionality in production environments.
 
-Inside of your Astro project, you'll see the following folders and files:
+## Tech Stack
+
+- **Framework**: [Astro](https://astro.build) 5.x
+- **Fonts**: Space Grotesk, JetBrains Mono
+- **Styling**: Component-scoped CSS with global styles
+
+## Project Structure
 
 ```text
 /
 ├── public/
+│   ├── favicon.svg
+│   └── og-image.png
 ├── src/
+│   ├── components/
+│   │   ├── Hero.astro
+│   │   ├── Topics.astro
+│   │   ├── Audience.astro
+│   │   ├── Format.astro
+│   │   ├── Signup.astro
+│   │   ├── Speaker.astro
+│   │   └── Footer.astro
 │   └── pages/
 │       └── index.astro
 └── package.json
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## Development
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+All commands are run from the root of the project:
 
-Any static assets, like images, can be placed in the `public/` directory.
+```bash
+# Install dependencies
+yarn install
 
-## 🧞 Commands
+# Start dev server at localhost:4321
+yarn dev
 
-All commands are run from the root of the project, from a terminal:
+# Build production site to ./dist/
+yarn build
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `yarn install`             | Installs dependencies                            |
-| `yarn dev`             | Starts local dev server at `localhost:4321`      |
-| `yarn build`           | Build your production site to `./dist/`          |
-| `yarn preview`         | Preview your build locally, before deploying     |
-| `yarn astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `yarn astro -- --help` | Get help using the Astro CLI                     |
+# Preview production build locally
+yarn preview
+```
 
-## 👀 Want to learn more?
+## Component Overview
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+The site is composed of modular sections:
+
+- **Hero**: Landing section with main heading and CTA
+- **Topics**: Overview of meetup topics (RAG, LLM evaluation, etc.)
+- **Audience**: Target audience description
+- **Format**: Meetup format and structure details
+- **Signup**: Registration/signup section
+- **Speaker**: Call for speakers with submission details
+- **Footer**: Footer with links and information
+
+## Design System
+
+The site uses a brutalist-inspired design with:
+- Color palette: Black, white, red accent (#D7141A), blue accent (#11457E)
+- Bold borders (2px - 8px)
+- Shadow effects for depth
+- Monospace and display fonts
+- No border radius (sharp, geometric aesthetic)
+
+## License
+
+MIT
